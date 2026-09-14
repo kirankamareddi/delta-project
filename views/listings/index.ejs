@@ -28,34 +28,34 @@
    display: none;
 }
 
-.tax-toggle{
+.tax-toggle {
    border: 1px solid black;
    border-radius: 1rem;
    height: 3.1rem;
-   padding: 1rem;
-    margin-left: auto; 
+   padding: 0 1rem;
+   margin-left: auto;
    display: flex;
    align-items: center;
 }
 
-.tax-toggle .form-check-reverse {
-   display: flex;
+.tax-content {
+   display: flex !important;
    align-items: center;
    gap: 0.5rem;
-   margin: 0;
+   margin: 0 !important;
+   padding: 0 !important;
 }
 
-.tax-toggle .form-check-input {
+.tax-content .form-check-label {
    margin: 0;
-   order: 2;
-}
-
-.tax-toggle .form-check-label {
-   margin: 0;
-   order: 1;
    white-space: nowrap;
 }
 
+.tax-content .form-check-input {
+   float: none !important;
+   margin: 0 !important;
+   flex-shrink: 0;
+}
 </style>
 
 <body>
@@ -116,9 +116,9 @@
 	</div>
 	
 	<div class="tax-toggle">
-	    <div class="form-check-reverse form-switch">
-         <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-         <label class="form-check-label" for="switchCheckDefault">Display prices after taxes</label>
+	    <div class="form-check form-switch tax-content">
+           <label class="form-check-label" for="switchCheckDefault">Display prices after taxes</label>
+           <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
         </div>
 	</div>
 </div>

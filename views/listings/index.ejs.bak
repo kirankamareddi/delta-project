@@ -28,14 +28,29 @@
    display: none;
 }
 
-.tax-toggle{
+.tax-toggle {
    border: 1px solid black;
    border-radius: 1rem;
    height: 3.1rem;
-   padding: 1rem;
-    margin-left: auto; 
+   padding: 0 1rem;
+   margin-left: auto;
    display: flex;
    align-items: center;
+}
+
+.tax-content {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   white-space: nowrap;
+}
+
+.tax-content label {
+   margin: 0;
+}
+
+.tax-content .form-check-input {
+   margin: 0;
 }
 
 </style>
@@ -98,9 +113,9 @@
 	</div>
 	
 	<div class="tax-toggle">
-	    <div class="form-check-reverse form-switch">
-         <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-         <label class="form-check-label" for="switchCheckDefault">Display prices after taxes</label>
+	    <div class="form-check form-switch tax-content">
+           <label class="form-check-label" for="switchCheckDefault">Display prices after taxes</label>
+           <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
         </div>
 	</div>
 </div>
